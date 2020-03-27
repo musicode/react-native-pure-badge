@@ -5,7 +5,7 @@
 RCT_EXPORT_MODULE(RNTBadge);
 
 RCT_EXPORT_METHOD(setBadge:(int)value) {
-
+    UIApplication.sharedApplication.applicationIconBadgeNumber = value;
 }
 
 @end

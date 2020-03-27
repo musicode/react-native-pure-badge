@@ -1,13 +1,7 @@
 package com.github.musicode.badge
 
-import android.os.Build
 import com.facebook.react.bridge.*
-import android.view.Display
-import android.content.Context.WINDOW_SERVICE
-import android.graphics.Point
-import android.graphics.Rect
-import android.view.WindowManager
-import java.lang.Exception
+import me.leolin.shortcutbadger.ShortcutBadger
 
 class RNTBadgeModule(private val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
@@ -17,9 +11,7 @@ class RNTBadgeModule(private val reactContext: ReactApplicationContext) : ReactC
 
     @ReactMethod
     fun setBadge(value: Int) {
-
-
-
+        ShortcutBadger.applyCount(reactContext, value)
     }
 
 }

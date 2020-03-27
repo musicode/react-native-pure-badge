@@ -1,32 +1,20 @@
-# react-native-pure-dimension
+# react-native-pure-badge
 
-This is a module which help you get screen dimension info.
+This is a module which help you set badge number.
 
 ## Installation
 
 ```
-npm i react-native-pure-dimension
+npm i react-native-pure-badge
 // link below 0.60
-react-native link react-native-pure-dimension
+react-native link react-native-pure-badge
 ```
 
 ## Setup
 
 ### iOS
 
-modify `AppDelegate.m`
-
-```oc
-#import <RNTDimension.h>
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  ...
-  // add this line
-  [RNTDimension bind:rootView];
-  return YES;
-}
-```
+nothing to do.
 
 ### Android
 
@@ -35,26 +23,10 @@ nothing to do.
 ## Usage
 
 ```js
-import dimension from 'react-native-pure-dimension'
+import badge from 'react-native-pure-badge'
 
-dimension.getStatusBarHeight().then(data => {
-  data.height
-})
+badge.setBadge(1)
 
-dimension.getNavigationBarHeight().then(data => {
-  data.height
-})
-
-dimension.getScreenSize().then(data => {
-  data.width
-  data.height
-})
-
-dimension.getSafeArea().then(data => {
-  data.top
-  data.right
-  data.bottom
-  data.left
-})
-
+// clear badge
+badge.setBadge(0)
 ```
