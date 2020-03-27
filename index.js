@@ -5,6 +5,10 @@ const { RNTBadge } = NativeModules
 
 export default {
 
+  getBadge() {
+    return RNTBadge.getBadge()
+  },
+
   setBadge(value) {
     RNTBadge.setBadge(value)
   },

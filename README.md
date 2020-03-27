@@ -29,4 +29,11 @@ badge.setBadge(1)
 
 // clear badge
 badge.setBadge(0)
+
+// read badge number
+badge.getBadge().then(data => {
+  // ios worked
+  // but android is always 0
+  data.badge
+})
 ```
