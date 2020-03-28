@@ -2,6 +2,10 @@
 
 @implementation RNTBadge
 
+- (dispatch_queue_t)methodQueue {
+  return dispatch_get_main_queue();
+}
+
 RCT_EXPORT_MODULE(RNTBadge);
 
 RCT_EXPORT_METHOD(getBadge:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject) {
@@ -11,9 +15,7 @@ RCT_EXPORT_METHOD(getBadge:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRej
 }
 
 RCT_EXPORT_METHOD(setBadge:(int)value) {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIApplication.sharedApplication.applicationIconBadgeNumber = value;
-    });
+    UIApplication.sharedApplication.applicationIconBadgeNumber = value;
 }
 
 @end
