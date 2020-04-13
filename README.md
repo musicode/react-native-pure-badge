@@ -2,6 +2,8 @@
 
 This is a module which help you set badge number.
 
+> This repo is deprecated, please visit the new [badge](https://github.com/react-native-hero/badge) repo.
+>
 ## Installation
 
 ```
